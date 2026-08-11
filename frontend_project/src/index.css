@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+    /* Modern Neo-Enterprise Palette (Linear/Vercel Style) */
+    --color-primary: #6366f1;          /* Indigo */
+    --color-primary-hover: #4f46e5;
+    --color-secondary: #10b981;       /* Emerald */
+
+    /* Layout */
+    --color-background: #09090b;      /* Zinc 950 */
+    --color-card: #121214;            /* Zinc 900 */
+    --color-sidebar: #09090b;
+    --color-muted: #18181b;           /* Zinc 800 */
+    --color-border: #27272a;          /* Zinc 700 */
+
+    /* Text */
+    --color-text-high: #fafafa;       /* Zinc 50 */
+    --color-text-low: #a1a1aa;        /* Zinc 400 */
+
+    /* Status */
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-warning: #f59e0b;
+    --color-info: #3b82f6;
+}
+
+@layer base {
+    body {
+        @apply bg-background text-text-high font-sans antialiased;
+        background-image: 
+            radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.05) 0px, transparent 50%),
+            radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+    }
+}
+
+/* Linear-style Grid Background Utility */
+.bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full hover:bg-border transition-colors;
+}
