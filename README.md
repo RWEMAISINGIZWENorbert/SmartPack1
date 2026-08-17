@@ -85,7 +85,7 @@ Before running the project, make sure you have the following installed:
 
 ```bash
 git clone <repository-url>
-cd SmartPack
+cd SmartPack1
 ```
 
 2. Install backend dependencies:
