@@ -112,6 +112,7 @@ DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_mysql_password
 DB_NAME=smartpark_hr
+ACCESS_TOKEN_SECRET_KEY=your_scret_key
 ```
 
 > Make sure your MySQL server is running and the database exists before starting the backend.
